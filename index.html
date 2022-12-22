@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XMas Timer</title>
+    <link rel="stylesheet" href="index.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+
+      <h1 class="ttl-prc">Auguri tra:</h1>
+      <div class="countdown">
+        <div>
+          <span id="days">00</span>
+          <h1 class="txt1">Giorni</h1>
+        </div>
+
+        <div>
+          <span id="hours">00</span>
+          <h1 class="txt2">Ore</h1>
+        </div>
+
+        <div>
+          <span id="minutes">00</span>
+          <h1 class="txt3">Minuti</h1>
+        </div>
+
+        <div>
+          <span id="seconds">00</span>
+          <h1 class="txt4">Secondi</h1>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+<script>
+    var christmas_date = new Date('Dec 25, 2022 00:00:00')
+
+    function countdown(){
+        var today = new Date()
+        var gap = christmas_date - today
+
+        var seconds = 1000
+        var minutes = seconds * 60
+        var hours = minutes * 60
+        var day = hours * 24
+
+        var d = Math.floor(gap / (day))
+        var h = Math.floor((gap % day) / (hours))
+        var m = Math.floor((gap % hours) / (minutes))
+        var s = Math.floor((gap % minutes) / (seconds))
+
+        document.getElementById("days").innerHTML = d
+        document.getElementById("hours").innerHTML = h
+        document.getElementById("minutes").innerHTML = m
+        document.getElementById("seconds").innerHTML = s
+
+    }
+
+    setInterval(()=>{
+        countdown()
+    }, 1000)
+</script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+    }
+    body{
+        display: flex;
+        background-image: url("https://dl.dropboxusercontent.com/s/iwu66bmjubm2q7a/AdobeStock_471815994.jpeg?dl=0");
+        background-size: contain;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+    .ttl-prc{
+        color: linen;
+        font-size: 8rem;
+        margin-bottom: 50px;
+        text-shadow: 5px 5px 1px #000;
+        text-align: center;
+        padding-right: 6rem;
+        background-color: transparent;
+    }
+    @media screen and (max-width: 768px){
+        .ttl-prc{
+            font-size: 3.5em;
+        }
+    }
+    .countdown{
+        margin: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 8rem;
+        padding-left: 5rem;
+        background-color: transparent;
+    }
+    .countdown div{
+        width: 180px;
+        height: 220px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        font-size: 2em;
+        color: #ffffff;
+        background-color: blue;
+        backdrop-filter: blur(20px);
+        border: 2px solid #ffffff30;
+        border-radius: 40px;
+        box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4);
+        text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
+    }
+    .countdown div h1{
+        font-size: 1em;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        letter-spacing: 4px;
+        background-color: transparent;
+    }
+    .countdown div span{
+        font-size: 2em;
+        background-color: transparent;
+    }
+    .container{
+        padding-bottom: 5rem;
+        padding-left: 10rem;
+        background-color: transparent;
+    }
+
+</style>
+</body>
+</html>
