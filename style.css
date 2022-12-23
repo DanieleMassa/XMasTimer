@@ -23,7 +23,7 @@ body{
     margin-bottom: 50px;
     text-shadow: 5px 5px 1px #000;
     text-align: center;
-    padding-right: 6rem;
+    padding-right: 20%;
     background-color: transparent;
 }
 @media screen and (max-width: 768px){
@@ -38,7 +38,6 @@ body{
     align-items: center;
     flex-wrap: wrap;
     padding-top: 8rem;
-    padding-left: 15%;
     background-color: transparent;
 }
 .countdown div{
@@ -70,7 +69,10 @@ body{
     background-color: transparent;
 }
 .container{
-    padding-bottom: 5rem;
+  /*  padding-bottom: 5rem;*/
     background-color: transparent;
-
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15%;
 }
