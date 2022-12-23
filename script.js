@@ -14,10 +14,20 @@ function countdown(){
     var m = Math.floor((gap % hours) / (minutes))
     var s = Math.floor((gap % minutes) / (seconds))
 
+
     document.getElementById("days").innerHTML = d
     document.getElementById("hours").innerHTML = h
     document.getElementById("minutes").innerHTML = m
     document.getElementById("seconds").innerHTML = s
+    
+    
+    const h1 = document.querySelector("#giorno");
+    let uno = "1"
+    
+
+    if(h1 == uno){
+        h1.innerText = "cavoletto di bruxelles";
+    }
 
 }
 
