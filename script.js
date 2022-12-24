@@ -19,16 +19,6 @@ function countdown(){
     document.getElementById("hours").innerHTML = h
     document.getElementById("minutes").innerHTML = m
     document.getElementById("seconds").innerHTML = s
-    
-    
-    const h1 = document.querySelector("#giorno");
-    let uno = "1"
-    
-
-    if(h1 == uno){
-        h1.innerText = "cavoletto di bruxelles";
-    }
-
 }
 
 setInterval(()=>{
